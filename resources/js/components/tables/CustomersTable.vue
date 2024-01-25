@@ -44,7 +44,7 @@
                     <BodyCell>
                         <span>
                             <InertiaLink
-                                :href="`${novaPath}/nova-stripe-manager/customers/${customer.id}`"
+                                :href="`${novaPath}/nova-stripe-manager/stripe/customers/${customer.id}`"
                                 :aria-label="__('View')"
                             >
                                 <HeroiconsOutlineEye />

@@ -88,6 +88,10 @@
         <DetailTextField
             :field="{ name: __('Tax Exempt'), value: customer.tax_exempt }"
         ></DetailTextField>
+        <SubscriptionCard
+            v-if="!initialLoading && !!Object.keys(customer.subscriptions).length"
+            :subscriptions="customer.subscriptions"
+        ></SubscriptionCard>
     </LoadingCard>
 </template>
 
@@ -114,9 +118,19 @@ export default {
                         this.customerId
                 )
                 .then((response) => {
+                    console.log(response)
                     this.customer = response.data.customer
                     this.initialLoading = false
-                })
+                }),
+                Nova.request()
+                    .get(
+                        '/nova-vendor/nova-stripe-manager/stripe/customers/' +
+                            this.customerId +
+                            '/susbcriptions'
+                    )
+                    .then((response) => {
+                        this.susbcriptions = response.data.susbcriptions
+                    })
         },
         formatAddress(address) {
             return address?.line1

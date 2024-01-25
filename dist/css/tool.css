@@ -99,11 +99,31 @@
 .ns-mb-6 {
     margin-bottom: 1.5rem
 }
+.ns-flex {
+    display: flex
+}
+.ns-items-center {
+    align-items: center
+}
+.ns-justify-between {
+    justify-content: space-between
+}
 .ns-p-3 {
     padding: 0.75rem
 }
 .ns-px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem
+}
+.ns-text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem
+}
+.ns-font-semibold {
+    font-weight: 600
+}
+.ns-text-gray-800 {
+    --tw-text-opacity: 1;
+    color: rgb(31 41 55 / var(--tw-text-opacity))
 }
 
