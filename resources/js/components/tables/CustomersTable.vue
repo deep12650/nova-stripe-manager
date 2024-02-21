@@ -43,12 +43,12 @@
                     </BodyCell>
                     <BodyCell>
                         <span>
-                            <InertiaLink
+                            <Link
                                 :href="`${novaPath}/nova-stripe-manager/stripe/customers/${customer.id}`"
                                 :aria-label="__('View')"
                             >
                                 <HeroiconsOutlineEye />
-                            </InertiaLink>
+                            </Link>
                         </span>
                     </BodyCell>
                 </tr>
