@@ -44,7 +44,7 @@
                     <BodyCell>
                         <span>
                             <Link
-                                :href="`${novaPath}/nova-stripe-manager/stripe/customers/${customer.id}`"
+                                :href="`${novaPath}/nova-stripe-manager/customers/${customer.id}`"
                                 :aria-label="__('View')"
                             >
                                 <HeroiconsOutlineEye />
@@ -73,7 +73,7 @@ export default {
             this.loading = true
 
             Nova.request()
-                .get('/nova-vendor/nova-stripe-manager/stripe/customers', { params })
+                .get('/nova-vendor/nova-stripe-manager/customers', { params })
                 .then((response) => {
                     this.customers = response.data.customers.data
                     this.hasMore = response.data.customers.has_more

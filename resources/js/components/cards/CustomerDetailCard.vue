@@ -114,7 +114,7 @@ export default {
         loadCustomer() {
             Nova.request()
                 .get(
-                    '/nova-vendor/nova-stripe-manager/stripe/customers/' +
+                    '/nova-vendor/nova-stripe-manager/customers/' +
                         this.customerId
                 )
                 .then((response) => {
@@ -124,7 +124,7 @@ export default {
                 }),
                 Nova.request()
                     .get(
-                        '/nova-vendor/nova-stripe-manager/stripe/customers/' +
+                        '/nova-vendor/nova-stripe-manager/customers/' +
                             this.customerId +
                             '/susbcriptions'
                     )
