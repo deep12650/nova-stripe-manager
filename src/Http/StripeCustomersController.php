@@ -15,8 +15,6 @@ class StripeCustomersController extends Controller
     public function show($id)
     {
         $customer = (new StripeClient)->getCustomer($id);
-        dd($customer);
-
         return response()->json(['customer' => $customer]);
     }
 }
