@@ -20,7 +20,7 @@ class StripeClient
         $this->apiKey = config('services.stripe.secret');
     }
 
-    public function listCustomers($options = [Limit::class => 10])
+    public function listCustomers($options = [])
     {
         try {
             return Customer::all($options, ['api_key' => $this->apiKey]);
