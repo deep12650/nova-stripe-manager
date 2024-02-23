@@ -44,11 +44,11 @@
                     <BodyCell>
                         <span>
                             <Link
-                                :href="`${novaPath}/nova-vendor/nova-stripe-manager/stripe/customers/${customer.id}`"
+                                :href="`${novaPath}/nova-stripe-manager/customers/${customer.id}`"
                                 :aria-label="__('View')"
                             >
                                 <HeroiconsOutlineEye />
-                            </Link>
+                        </Link>
                         </span>
                     </BodyCell>
                 </tr>
