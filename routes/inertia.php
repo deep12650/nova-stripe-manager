@@ -24,7 +24,6 @@ Route::name('nova-stripe-manager')->group(function () {
     })->name('.customers');
 
     Route::get('customers/{customerId}', function (string $customerId) {
-        die($customerId);
         return inertia('CustomerDetail', [
             'customerId' => $customerId,
         ]);
